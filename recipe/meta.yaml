@@ -1,6 +1,6 @@
 {% set name = "python-relion" %}
 {% set pypi = "relion" %}
-{% set version = "0.8.5" %}
+{% set version = "0.8.6" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi[0] }}/{{ pypi }}/relion-{{ version }}.tar.gz
-  sha256: b45146e0c72af54cd755df8cb9d9082ee8c34a8625955146ea32ca9ce1e07079
+  sha256: 6f20d006688d4058e197ecfa5c8b6ea8ca852117c6cdb0e47a77aecad4010705
 
 build:
   number: 0
