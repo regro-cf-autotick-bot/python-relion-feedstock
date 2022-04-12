@@ -1,6 +1,6 @@
 {% set name = "python-relion" %}
 {% set pypi = "relion" %}
-{% set version = "0.9.9" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi[0] }}/{{ pypi }}/relion-{{ version }}.tar.gz
-  sha256: 0e35165f9da9b8ff108eaebb0da22c56b78b4ee037e892f19cde71ac4371a617
+  sha256: 032f0fcbf66599155925992b9cb67397c5ac4d022e6b44813a76d1a5a0f7a22a
+  patches:
+    - 0001-ccpem-pipeliner.patch
 
 build:
   number: 0
@@ -27,7 +29,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
     - gemmi
     - ispyb
@@ -37,7 +39,8 @@ requirements:
     - pandas
     - pillow
     - plotly
-    - python >=3.6
+    - python >=3.8
+    - pyyaml
 
 test:
   imports:
