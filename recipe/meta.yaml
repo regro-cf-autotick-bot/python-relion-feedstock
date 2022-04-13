@@ -1,6 +1,6 @@
 {% set name = "python-relion" %}
 {% set pypi = "relion" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,9 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi[0] }}/{{ pypi }}/relion-{{ version }}.tar.gz
-  sha256: 032f0fcbf66599155925992b9cb67397c5ac4d022e6b44813a76d1a5a0f7a22a
-  patches:
-    - 0001-ccpem-pipeliner.patch
+  sha256: aafacd86ee29f5d18ad9aab12b6598615fc90bcc126592f09e635faa4ecbb724
 
 build:
   number: 0
