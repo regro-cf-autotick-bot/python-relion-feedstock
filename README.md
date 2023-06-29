@@ -1,11 +1,11 @@
-About python-relion
-===================
+About python-relion-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-relion-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/relion/
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-relion-feedstock/blob/main/LICENSE.txt)
 
 Summary: Relion Python API
 
