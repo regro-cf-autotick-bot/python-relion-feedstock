@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ pypi[0] }}/{{ pypi }}/relion-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ pypi[0] }}/{{ pypi }}/relion-{{ version }}.tar.gz
   sha256: 9cf4336d5ac5714b21dd55990f8520b4dc34afa63f4e75f41269ac7a1bbeba5f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - relipy.job = relion.cli.current_job:run
@@ -27,7 +27,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - gemmi
     - ispyb
@@ -37,7 +37,7 @@ requirements:
     - pandas
     - pillow
     - plotly
-    - python >=3.8
+    - python >={{ python_min }}
     - pyyaml
 
 test:
@@ -55,6 +55,7 @@ test:
     - external_job_fsc_fitting --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/relion/
